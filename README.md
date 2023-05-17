@@ -29,9 +29,11 @@ https://app.powerbi.com/view?r=eyJrIjoiOGY1OWExMTEtOTg2Mi00Y2ExLTg5ZjUtOWVhOGI0Y
 # Training Videos - Learn Data Analytics with Emmanuel
 
 **WEBINAR: Power BI for Beginners 2 - Get data into Power BI and build your first report**
+
 ▶️ ---> https://www.youtube.com/watch?v=FoVdXukxgqY
 
 **Training Video: Power BI for Beginners** 
+
 ▶️ ---> https://www.youtube.com/watch?v=CnbW1peD_Bo
 
 
