@@ -26,7 +26,7 @@ Link to Memba Insight Template: https://app.powerbi.com/view?r=eyJrIjoiMWE3ZWI5O
 https://app.powerbi.com/view?r=eyJrIjoiOGY1OWExMTEtOTg2Mi00Y2ExLTg5ZjUtOWVhOGI0YWQwOThhIiwidCI6IjgxODFkOWNiLTUyMTAtNDNlNy05ZWUyLTY1Y2Q2OWNlMmEzYSJ9&pageName=ReportSection665b89b2749452a143ae
 
 
-# Learn Data Analytics with Emmanuel
+# Training Videos - Learn Data Analytics with Emmanuel
 
 ▶️ WEBINAR: Power BI for Beginners 2 - Get data into Power BI and build your first report ---> https://www.youtube.com/watch?v=FoVdXukxgqY
 
