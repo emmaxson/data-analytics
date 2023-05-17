@@ -1,8 +1,6 @@
-# data-analytics
-Learn Data Analytics with Power BI - Report Templates, Samples, etc. | Learn with Emmanuel
+# Learn Data Analytics with Emmanuel | Learn with Emmanuel
 
-# Emmanuel's Profile
-Learn more about me, my certifications and training here --- https://lwe.disha.page/
+Learn Data Analytics with Power BI - Report Templates, Samples, etc. Learn more about me, my certifications and training here --- https://lwe.disha.page/
 
 # Emmanuel's Power BI Portfolio
 
