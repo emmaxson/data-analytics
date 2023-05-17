@@ -31,3 +31,18 @@ https://app.powerbi.com/view?r=eyJrIjoiOGY1OWExMTEtOTg2Mi00Y2ExLTg5ZjUtOWVhOGI0Y
 ▶️ WEBINAR: Power BI for Beginners 2 - Get data into Power BI and build your first report ---> https://www.youtube.com/watch?v=FoVdXukxgqY
 
 ▶️ Training Video: Power BI for Beginners ---> https://www.youtube.com/watch?v=CnbW1peD_Bo
+
+
+# Profile & Certifications
+
+🏅 My Microsoft Certification Profile --- https://docs.microsoft.com/en-gb/users/emmaxson/
+
+🎓 Microsoft Certified: Power Platform Fundamentals --- https://www.credly.com/badges/e1c62227-bc76-4bb5-a788-ea07dad95db8/public_url
+
+🎓 IBM Enterprise Design Thinking Practitioner --- https://www.credly.com/badges/3a2c1d1f-95fd-4ee7-9ac3-bf69580ed9cd/public_url
+
+🧑🏾‍💼 My Work Experience --- https://drive.google.com/file/d/1D4M4SpKaWVTLDRgEEYU0NlAV_qR1SPZt/view?usp=sharing
+
+🧑🏾‍💼My Technology Stack, Competence & Skill Set --- https://docs.google.com/document/d/196BpWr2UmibvcAEx4Cw6OJ64BA0sTa94le6tlWCLl0Q/edit?usp=sharing
+
+📜 LinkedIn Profile --- https://www.linkedin.com/in/emmaxson/
