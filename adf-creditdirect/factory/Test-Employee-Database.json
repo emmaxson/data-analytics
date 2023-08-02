@@ -1,0 +1,9 @@
+{
+	"name": "Test-Employee-Database",
+	"location": "southafricanorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d97d824d-89be-4598-9820-0b8539056bfa",
+		"tenantId": "8181d9cb-5210-43e7-9ee2-65cd69ce2a3a"
+	}
+}
