@@ -1,0 +1,24 @@
+{
+	"name": "Trigger_7hb",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "DAG1_CopyEmployeesData",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2023-08-02T23:06:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
