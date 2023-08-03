@@ -20,19 +20,19 @@
 		},
 		"schema": [
 			{
-				"name": "emp_no",
+				"name": "empNo",
 				"type": "String"
 			},
 			{
-				"name": "birth_date",
+				"name": "birthDate",
 				"type": "String"
 			},
 			{
-				"name": "first_name",
+				"name": "firstName",
 				"type": "String"
 			},
 			{
-				"name": "last_name",
+				"name": "lastName",
 				"type": "String"
 			},
 			{
@@ -40,7 +40,7 @@
 				"type": "String"
 			},
 			{
-				"name": "hire_date",
+				"name": "hireDate",
 				"type": "String"
 			}
 		]
