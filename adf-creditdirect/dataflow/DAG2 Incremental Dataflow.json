@@ -5,9 +5,9 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "DestinationDataset_7hb",
-						"type": "DatasetReference"
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
 					},
 					"name": "MySQLSource"
 				}
@@ -27,19 +27,18 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          empNo as string,",
-				"          birthDate as string,",
-				"          firstName as string,",
-				"          lastName as string,",
-				"          gender as string,",
-				"          hireDate as string",
-				"     ),",
+				"source(useSchema: false,",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     limit: 1000,",
+				"     inferDriftedColumnTypes: true,",
 				"     ignoreNoFilesFound: false,",
 				"     waterMarkColumn: 'emp_no',",
+				"     format: 'delimited',",
+				"     fileSystem: 'dataverse',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: true,",
 				"     mode: 'read') ~> MySQLSource",
 				"MySQLSource derive(gender = iif(gender == \"M\", \"Male\", iif(gender == \"F\", \"Female\", \"Not Defined\"))) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
