@@ -6,14 +6,21 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "SourceDataset_7hb",
+						"referenceName": "DestinationDataset_7hb",
 						"type": "DatasetReference"
 					},
-					"name": "MySQLSource",
-					"description": "Import data from MySQLSource"
+					"name": "MySQLSource"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DestinationDataset_7hb",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "derivedColumn1"
@@ -21,24 +28,35 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          emp_no as integer,",
-				"          birth_date as date,",
+				"          emp_no as string,",
+				"          birth_date as string,",
 				"          first_name as string,",
 				"          last_name as string,",
 				"          gender as string,",
-				"          hire_date as date",
+				"          hire_date as string",
 				"     ),",
-				"     allowSchemaDrift: true,",
+				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
-				"     inferDriftedColumnTypes: true,",
 				"     limit: 1000,",
-				"     enableCdc: true,",
-				"     mode: 'read',",
-				"     skipInitialLoad: false,",
+				"     ignoreNoFilesFound: false,",
 				"     waterMarkColumn: 'emp_no',",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> MySQLSource",
-				"MySQLSource derive(gender = iif(gender == \"M\", \"Male\", iif(gender == \"F\", \"Female\", \"Not Defined\"))) ~> derivedColumn1"
+				"     mode: 'read') ~> MySQLSource",
+				"MySQLSource derive(gender = iif(gender == \"M\", \"Male\", iif(gender == \"F\", \"Female\", \"Not Defined\"))) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          emp_no as string,",
+				"          birth_date as string,",
+				"          first_name as string,",
+				"          last_name as string,",
+				"          gender as string,",
+				"          hire_date as string",
+				"     ),",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
