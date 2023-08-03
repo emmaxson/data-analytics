@@ -1,8 +1,8 @@
 {
-	"name": "AzureMySqlTable1",
+	"name": "AzureMySqlTable1_ansii",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "CD_AzureMySql_Employees",
+			"referenceName": "AzureMySql1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -44,6 +44,9 @@
 				"precision": 0,
 				"scale": 0
 			}
-		]
+		],
+		"typeProperties": {
+			"tableName": "employees"
+		}
 	}
 }
