@@ -1,0 +1,37 @@
+{
+	"name": "DAG2_ChangeDataCapture",
+	"properties": {
+		"description": "Monitor changes in data",
+		"activities": [
+			{
+				"name": "DAG2 Incremental Dataflow",
+				"description": "Monitors changes in the data in MySQL and stores the change in a blob file ready for sync with Big Query",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DAG2 Incremental Dataflow",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine",
+					"continuationSettings": {
+						"customizedCheckpointKey": "3189c90d-506d-460b-be40-1d09a189ca1a"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}

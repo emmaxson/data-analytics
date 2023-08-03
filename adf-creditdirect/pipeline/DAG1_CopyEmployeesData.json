@@ -4,7 +4,8 @@
 		"description": "Pipeline to copy all employees table to CSV file in Azure Datalake",
 		"activities": [
 			{
-				"name": "Copy_7hb",
+				"name": "Copy_AllEmployees",
+				"description": "copies all Employee Data into a staging blob file ready for sync to Big Query.\nCan also be written to Big Query API directly",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -51,8 +52,7 @@
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "emp_no",
-									"type": "String",
+									"name": "empNo",
 									"physicalType": "String"
 								}
 							},
@@ -63,8 +63,7 @@
 									"physicalType": "date"
 								},
 								"sink": {
-									"name": "birth_date",
-									"type": "String",
+									"name": "birthDate",
 									"physicalType": "String"
 								}
 							},
@@ -75,8 +74,7 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "first_name",
-									"type": "String",
+									"name": "firstName",
 									"physicalType": "String"
 								}
 							},
@@ -87,8 +85,7 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "last_name",
-									"type": "String",
+									"name": "lastName",
 									"physicalType": "String"
 								}
 							},
@@ -111,8 +108,7 @@
 									"physicalType": "date"
 								},
 								"sink": {
-									"name": "hire_date",
-									"type": "String",
+									"name": "hireDate",
 									"physicalType": "String"
 								}
 							}
@@ -126,7 +122,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_7hb",
+						"referenceName": "SourceDataset_MySQL",
 						"type": "DatasetReference"
 					}
 				],

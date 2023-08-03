@@ -1,6 +1,7 @@
 {
-	"name": "SourceDataset_7hb",
+	"name": "SourceDataset_MySQL",
 	"properties": {
+		"description": "CreditDirect MySQL Database Instance",
 		"linkedServiceName": {
 			"referenceName": "CD_AzureMySql_Employees",
 			"type": "LinkedServiceReference"

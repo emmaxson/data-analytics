@@ -5,9 +5,9 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"linkedService": {
-						"referenceName": "AzureDataLakeStorage1",
-						"type": "LinkedServiceReference"
+					"dataset": {
+						"referenceName": "SourceDataset_MySQL",
+						"type": "DatasetReference"
 					},
 					"name": "MySQLSource"
 				}
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DestinationDataset_7hb",
+						"referenceName": "CDC_DelimitedText1",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -27,30 +27,27 @@
 				}
 			],
 			"scriptLines": [
-				"source(useSchema: false,",
+				"source(output(",
+				"          emp_no as integer,",
+				"          birth_date as date,",
+				"          first_name as string,",
+				"          last_name as string,",
+				"          gender as string,",
+				"          hire_date as date",
+				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     inferDriftedColumnTypes: true,",
-				"     ignoreNoFilesFound: false,",
+				"     limit: 1000,",
+				"     enableCdc: true,",
+				"     mode: 'read',",
+				"     skipInitialLoad: false,",
 				"     waterMarkColumn: 'emp_no',",
-				"     format: 'delimited',",
-				"     fileSystem: 'dataverse',",
-				"     columnDelimiter: ',',",
-				"     escapeChar: '\\\\',",
-				"     quoteChar: '\\\"',",
-				"     columnNamesAsHeader: true,",
-				"     mode: 'read') ~> MySQLSource",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> MySQLSource",
 				"MySQLSource derive(gender = iif(gender == \"M\", \"Male\", iif(gender == \"F\", \"Female\", \"Not Defined\"))) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          empNo as string,",
-				"          birthDate as string,",
-				"          firstName as string,",
-				"          lastName as string,",
-				"          gender as string,",
-				"          hireDate as string",
-				"     ),",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
