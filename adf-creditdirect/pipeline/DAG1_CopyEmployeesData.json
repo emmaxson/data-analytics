@@ -43,6 +43,80 @@
 					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "emp_no",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "emp_no",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "birth_date",
+									"type": "DateTime",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "birth_date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "first_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "first_name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "last_name",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "last_name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "gender",
+									"type": "String",
+									"physicalType": "enum"
+								},
+								"sink": {
+									"name": "gender",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "hire_date",
+									"type": "DateTime",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "hire_date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,

@@ -18,6 +18,31 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "emp_no",
+				"type": "String"
+			},
+			{
+				"name": "birth_date",
+				"type": "String"
+			},
+			{
+				"name": "first_name",
+				"type": "String"
+			},
+			{
+				"name": "last_name",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "hire_date",
+				"type": "String"
+			}
+		]
 	}
 }
