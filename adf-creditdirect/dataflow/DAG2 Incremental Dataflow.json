@@ -14,7 +14,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          emp_no as integer,",
@@ -26,12 +30,15 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     inferDriftedColumnTypes: true,",
+				"     limit: 1000,",
 				"     enableCdc: true,",
 				"     mode: 'read',",
 				"     skipInitialLoad: false,",
 				"     waterMarkColumn: 'emp_no',",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> MySQLSource"
+				"     format: 'table') ~> MySQLSource",
+				"MySQLSource derive(gender = iif(gender == \"M\", \"Male\", iif(gender == \"F\", \"Female\", \"Not Defined\"))) ~> derivedColumn1"
 			]
 		}
 	}
